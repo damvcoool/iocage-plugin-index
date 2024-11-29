@@ -1,7 +1,7 @@
 {
     "name": "mineos",
     "release": "13.2-RELEASE",
-    "artifact": "https://github.com/jsegaert/iocage-plugin-mineos.git",
+    "artifact": "https://github.com/damvcoool/iocage-plugin-mineos.git",
     "official": false,
     "properties": {
         "mount_procfs": 1,
