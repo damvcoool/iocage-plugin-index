@@ -1,6 +1,6 @@
 {
     "name": "rabbitmq",
-    "release": "13.3-RELEASE",
+    "release": "13.4-RELEASE",
     "artifact": "https://github.com/fadushin/iocage-plugin-rabbitmq.git",
     "pkgs": [
         "rabbitmq"

@@ -1,6 +1,6 @@
 {
     "name": "adguardhome",
-    "release": "13.3-RELEASE",
+    "release": "13.4-RELEASE",
     "artifact": "https://github.com/leandroscardua/iocage-plugin-adguardhome.git",
     "official": false,
     "pkgs": [

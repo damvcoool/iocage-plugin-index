@@ -23,5 +23,5 @@
         "py39-websockets",
         "xorg-vfbserver"
     ],
-    "release": "13.3-RELEASE"
+    "release": "13.4-RELEASE"
 }
