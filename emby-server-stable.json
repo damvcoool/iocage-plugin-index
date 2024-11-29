@@ -1,6 +1,6 @@
 {
     "name": "emby-server-stable",
-    "release": "13.2-RELEASE",
+    "release": "13.3-RELEASE",
     "artifact": "https://github.com/freenas/iocage-plugin-emby.git",
     "official": false,
     "properties": {

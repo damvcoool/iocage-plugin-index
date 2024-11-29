@@ -1,6 +1,6 @@
 {
     "name": "photoprism",
-    "release": "12.4-RELEASE",
+    "release": "13.3-RELEASE",
     "artifact": "https://github.com/oridyn/iocage-plugin-photoprism",
     "official": false,
     "properties": {

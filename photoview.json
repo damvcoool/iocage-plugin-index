@@ -1,6 +1,6 @@
 {
     "name": "photoview",
-    "release": "13.2-RELEASE",
+    "release": "13.3-RELEASE",
     "artifact": "https://github.com/hellvesper/iocage-plugin-photoview",
     "official": false,
     "plugin_schema": "2",
