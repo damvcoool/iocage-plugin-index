@@ -1,11 +1,11 @@
 {
     "name": "Gitea",
     "release": "13.2-RELEASE",
-    "artifact": "https://github.com/ConorBeh/iocage-plugin-gitea.git",
+    "artifact": "https://github.com/damvcoool/iocage-plugin-gitea.git",
     "pkgs": [
         "gitea",
-        "postgresql11-server",
-        "postgresql11-contrib",
+        "postgresql17-server",
+        "postgresql17-contrib",
         "bash"
     ],
     "properties": {
