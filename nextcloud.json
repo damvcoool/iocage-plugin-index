@@ -5,6 +5,7 @@
     "artifact": "https://github.com/damvcoool/iocage-plugin-nextcloud.git",
     "official": false,
     "properties": {
+        "vnet": 1,
         "dhcp": 1
     },
     "pkgs": [
