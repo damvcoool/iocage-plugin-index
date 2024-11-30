@@ -18,7 +18,7 @@
         "php83-pecl-redis",
         "php83-phar",
         "nginx",
-        "mysql80-server",
+        "mysql84-server",
         "redis",
         "py311-fail2ban",
         "py311-certbot"
