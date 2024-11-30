@@ -6,6 +6,7 @@
     "official": false,
     "properties": {
         "vnet": 1,
+        "vnet_interfaces": "auto",
         "dhcp": 1
     },
     "pkgs": [
