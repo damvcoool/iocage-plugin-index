@@ -1,12 +1,11 @@
 {
     "name": "Nextcloud",
     "plugin_schema": "2",
-    "release": "13.1-RELEASE",
+    "release": "13.2-RELEASE",
     "artifact": "https://github.com/damvcoool/iocage-plugin-nextcloud.git",
     "official": false,
     "properties": {
-        "nat": 1,
-        "nat_forwards": "tcp(80:8282),tcp(443:8283)"
+        "dhcp": 1
     },
     "pkgs": [
         "ffmpeg",
@@ -20,8 +19,8 @@
         "nginx",
         "mysql80-server",
         "redis",
-        "py39-fail2ban",
-        "py39-certbot"
+        "py311-fail2ban",
+        "py311-certbot"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
