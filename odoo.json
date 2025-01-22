@@ -5,7 +5,7 @@
     "pkgs": [
         "odoo",
         "postgresql16-server",
-        "postgresql16-contrib",
+        "postgresql16-contrib"
     ],
     "properties": {
         "dhcp": 1
