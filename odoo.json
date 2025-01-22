@@ -3,7 +3,7 @@
     "release": "13.4-RELEASE",
     "artifact": "https://github.com/damvcoool/iocage-plugin-odoo.git",
     "pkgs": [
-        "odoo",
+        "py311-odoo",
         "postgresql16-server",
         "postgresql16-contrib"
     ],
