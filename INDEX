@@ -1,18 +1,26 @@
 {
-	"gitea": {
-		"MANIFEST": "gitea.json",
-		"name": "Gitea",
-		"icon": "https://icons.freenas.org/community-icons/gitea.png",
-		"description": "Gitea is a community managed lightweight code hosting solution written in Go.",
-		"official": false,
-		"primary_pkg": "gitea"
-	},
+    "gitea": {
+        "MANIFEST": "gitea.json",
+        "name": "Gitea",
+        "icon": "https://icons.freenas.org/community-icons/gitea.png",
+        "description": "Gitea is a community managed lightweight code hosting solution written in Go.",
+        "official": false,
+        "primary_pkg": "gitea"
+    },
     "nextcloud": {
         "MANIFEST": "nextcloud.json",
         "name": "Nextcloud",
         "icon": "https://media.sys.truenas.net/core/icons/nextcloud.png",
         "description": "Suite of client-server software for creating and using file hosting services.",
         "official": false,
-        "primary_pkg": "nextcloud-php83",
+        "primary_pkg": "nextcloud-php83"
+    },
+    "odoo": {
+        "MANIFEST": "odoo.json",
+        "name": "Odoo",
+        "icon": "https://media.sys.truenas.net/core/icons/odoo.png",
+        "description": "Odoo is a suite of web based open source business apps.",
+        "official": false,
+        "primary_pkg": "py311-odoo"
     }
 }
