@@ -18,7 +18,7 @@
     "odoo": {
         "MANIFEST": "odoo.json",
         "name": "Odoo",
-        "icon": "https://media.sys.truenas.net/core/icons/odoo.png",
+        "icon": "https://raw.githubusercontent.com/damvcoool/iocage-plugin-index/refs/heads/master/icons/odoo.png",
         "description": "Odoo is a suite of web based open source business apps.",
         "official": false,
         "primary_pkg": "py311-odoo"
