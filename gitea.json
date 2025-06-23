@@ -1,6 +1,6 @@
 {
     "name": "Gitea",
-    "release": "13.4-RELEASE",
+    "release": "13.5-RELEASE",
     "artifact": "https://github.com/damvcoool/iocage-plugin-gitea.git",
     "pkgs": [
         "gitea",
