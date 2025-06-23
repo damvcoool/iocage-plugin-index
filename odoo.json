@@ -1,24 +1,36 @@
 {
-    "name": "Odoo",
-    "release": "13.4-RELEASE",
-    "artifact": "https://github.com/damvcoool/iocage-plugin-odoo.git",
-    "pkgs": [
-        "py311-odoo",
-        "postgresql16-server",
-        "postgresql16-contrib"
-    ],
-    "properties": {
-        "dhcp": 1
-    },
-    "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
-    "fingerprints": {
-        "plugin-default": [
-            {
-                "function": "sha256",
-                "fingerprint": "b0170035af3acc5f3f3ae1859dc717101b4e6c1d0a794ad554928ca0cbb2f438"
-            }
-        ]
-    },
-    "official": false,
-    "revision": 0
+  "name": "odoo",
+  "version": "18.0.20250108",
+  "release": "13.4-RELEASE",
+
+  "artifact": "https://github.com/damvcoool/iocage-plugin-odoo.git",
+  "pkgs": [
+    "py311-odoo",
+    "postgresql17-server",
+    "postgresql17-contrib"
+  ],
+
+  "properties": {
+    "dhcp": 1
+  },
+
+  "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
+
+  "fingerprints": {
+    "plugin-default": [
+      {
+        "function": "sha256",
+        "fingerprint": "b0170035af3acc5f3f3ae1859dc717101b4e6c1d0a794ad554928ca0cbb2f438"
+      }
+    ]
+  },
+
+  "exec": "/usr/local/etc/rc.d/odoo",
+  "plugin_schema": "2",
+  "official": false,
+  "revision": 1,
+  "maintainer": "you@example.com",
+
+  "description": "Web-based open-source ERP with CRM, HR, accounting, and more. Odoo 18 deployed as a TrueNAS plugin.",
+  "tags": ["odoo", "erp", "accounting", "crm", "python", "business"]
 }
