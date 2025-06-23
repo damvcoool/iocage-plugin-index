@@ -7,7 +7,8 @@
   "pkgs": [
     "py311-odoo",
     "postgresql17-server",
-    "postgresql17-contrib"
+    "postgresql17-contrib",
+    "py311-pip"
   ],
 
   "properties": {
