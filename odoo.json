@@ -1,7 +1,7 @@
 {
   "name": "odoo",
   "version": "18.0.20250108",
-  "release": "13.4-RELEASE",
+  "release": "13.5-RELEASE",
 
   "artifact": "https://github.com/damvcoool/iocage-plugin-odoo.git",
   "pkgs": [
@@ -29,7 +29,6 @@
   "plugin_schema": "2",
   "official": false,
   "revision": 1,
-  "maintainer": "you@example.com",
 
   "description": "Web-based open-source ERP with CRM, HR, accounting, and more. Odoo 18 deployed as a TrueNAS plugin.",
   "tags": ["odoo", "erp", "accounting", "crm", "python", "business"]
