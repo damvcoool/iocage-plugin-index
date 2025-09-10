@@ -6,8 +6,8 @@
     "official": false,
     "properties": {
         "vnet": 1,
-        "dhcp": 1
-        "vnet_default_interface": "auto"
+        "dhcp": 1,
+        "ip6": "disable"
     },
     "pkgs": [
         "ffmpeg",
