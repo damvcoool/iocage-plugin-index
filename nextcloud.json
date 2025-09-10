@@ -7,6 +7,7 @@
     "properties": {
         "vnet": 1,
         "dhcp": 1
+        "vnet_default_interface": "auto"
     },
     "pkgs": [
         "ffmpeg",
