@@ -13,7 +13,7 @@
         "icon": "https://media.sys.truenas.net/core/icons/nextcloud.png",
         "description": "Suite of client-server software for creating and using file hosting services.",
         "official": false,
-        "primary_pkg": "nextcloud-php83"
+        "primary_pkg": "nextcloud-php84"
     },
     "odoo": {
         "MANIFEST": "odoo.json",

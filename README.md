@@ -1,69 +1,115 @@
-[plugins-shield]:https://img.shields.io/badge/TrueNAS%20CORE-Community%20Plugins-blue?logo=TrueNAS&style=for-the-badge
+[plugins-shield]:https://img.shields.io/badge/TrueNAS%20CORE-Personal%20Plugin%20Index-blue?logo=TrueNAS&style=for-the-badge
 [plugins-link]:https://www.truenas.com/plugins/
-[release-shield]:https://img.shields.io/badge/Default%20Branch-13.1--RELEASE-blue?logo=FreeBSD&logoColor=red&style=for-the-badge
-[release-link]:https://www.freebsd.org/releases/12.2R/relnotes/
+[release-shield]:https://img.shields.io/badge/FreeBSD-13.5--RELEASE-blue?logo=FreeBSD&logoColor=red&style=for-the-badge
+[release-link]:https://www.freebsd.org/releases/13.5R/relnotes/
 
 [![x][plugins-shield]][plugins-link] [![x][release-shield]][release-link]
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/ix-plugin-hub/iocage-plugin-index/Validate%20JSONs?label=Validate%20JSONs&logo=github&style=for-the-badge)
-[![Cirrus CI - Task and Script Build Status](https://img.shields.io/cirrus/github/ix-plugin-hub/iocage-plugin-index?label=Install%20test&logo=cirrus-ci&logoColor=green&style=for-the-badge)](https://cirrus-ci.com/github/ix-plugin-hub/iocage-plugin-index/master)
+![GitHub last commit](https://img.shields.io/github/last-commit/damvcoool/iocage-plugin-index?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/damvcoool/iocage-plugin-index?style=for-the-badge)
 
-# iocage-ix-plugins
-Community created plugins for [TrueNAS](https://www.truenas.com/) and [FreeBSD](http://www.freebsd.org)
+# TrueNAS Core 13 Personal Plugin Index
+
+Personal repository for [TrueNAS Core 13](https://www.truenas.com/) Plugins/Jails based on [FreeBSD 13.5-RELEASE](http://www.freebsd.org).
+
+This is a custom plugin index maintained for personal use, containing plugins compatible with TrueNAS Core 13.
+
+## Available Plugins
+
+Currently available plugins in this index:
+
+- **Gitea** - Lightweight code hosting solution written in Go
+- **Nextcloud** - File hosting and collaboration platform
+- **Odoo** - Open-source ERP and CRM suite
 
 # Creating Plugins
-Add a plugin JSON file to this repo along with an appropriate icon in the [icons directory](icons/).
 
-After creating the JSON file and adding an icon, add the plugin to the [INDEX file](INDEX).
-If the plugin is approved, it appears in the list of iocage plugins.
+To add a new plugin to this personal index:
 
-For more detailed information on creating a plugin, see [Create a Plugin](https://www.ixsystems.com/documentation/freenas/11.2-U6/plugins.html#create-a-plugin).
+1. Create a plugin JSON manifest file (e.g., `myplugin.json`) with the required fields:
+   - `name`: Plugin name
+   - `release`: FreeBSD release (e.g., "13.5-RELEASE")
+   - `artifact`: URL to your plugin artifact repository
+   - `pkgs`: Array of FreeBSD packages to install
+   - `properties`: Plugin properties (networking, etc.)
+
+2. Add an icon for your plugin in the [icons directory](icons/) (PNG format, 128x128 pixels recommended)
+
+3. Update the [INDEX file](INDEX) with your plugin entry in alphabetical order
+
+4. Ensure your plugin artifact repository contains:
+   - `post_install.sh` - Post-installation script
+   - `ui.json` - Admin portal configuration (optional)
+   - `settings.json` - Plugin settings interface (optional)
+
+For detailed information on creating plugins, see the [template directory](template/) and [TrueNAS documentation](https://www.truenas.com/docs/core/).
 
 # Installing Plugins
 
+## Prerequisites
+
+- TrueNAS Core 13.x system
+- Network connectivity
+- Available storage for jail creation
+
+## Using This Custom Index
+
+To use this personal plugin index with iocage on TrueNAS Core 13:
+
+<pre>
+iocage fetch -P <i>plugin-name</i> -g https://github.com/damvcoool/iocage-plugin-index ip4_addr="<i>interface</i>|<i>IPaddress</i>"
+</pre>
+
+where:
+- *plugin-name* is the name from the INDEX file (e.g., `gitea`, `nextcloud`, `odoo`)
+- *interface* is the name of the active network interface (e.g., `em0`, `igb0`)
+- *IPaddress* is the desired IP address for the plugin (e.g., `192.168.1.100`)
+
+**Example:**
+<pre>
+iocage fetch -P gitea -g https://github.com/damvcoool/iocage-plugin-index ip4_addr="igb0|192.168.1.100"
+</pre>
+
 ## Using Local File
-Install a plugin using a local file:
+
+To install a plugin using a local manifest file:
 <pre>
-iocage fetch -P /path/to/local/file.json ip4_addr="<i>interface</i>|<i>IPaddress</i>"
+iocage fetch -P /path/to/local/plugin.json ip4_addr="<i>interface</i>|<i>IPaddress</i>"
 </pre>
-where *interface* is the name of the active network interface and *IP address* is the desired IP address for the plugin.
-For example, `ip4_addr="em0|10.238.4.196"`.
 
-## Pulling from Internet
-Install a plugin from the internet:
+## Post-Installation
+
+After installation, access your plugin's web interface (if available) through the admin portal URL specified in the plugin's `ui.json` file. Check the jail's IP address with:
+
 <pre>
-iocage fetch -P jenkins -g https://github.com/ix-plugin-hub/iocage-plugin-index ip4_addr="<i>interface</i>|<i>IPaddress</i>"
+iocage list
 </pre>
-where *interface* is the name of the active network interface and *IP address* is the desired IP address for the plugin.
-For example, `ip4_addr="igb0|192.168.0.91"`
 
-# Plugin installation tests
-This repository contains cirrus-ci tasks for automated plugin installation tests executed as a part of the PR checks and on the `master` branch.
+## Plugin Repositories
 
-[.cirrus/install_script.sh](.cirrus/install_script.sh) is the installation test script run for every plugin included in the [.cirrus.yml](.cirrus.yml) file.
+Each plugin references an artifact repository that contains the installation scripts and configuration:
 
-## Plugin block
-The following `.cirrus.yml` task shows an example of needed YAML section to enable automatic installation test for a plugin.
+- **Gitea**: https://github.com/damvcoool/iocage-plugin-gitea
+- **Nextcloud**: https://github.com/damvcoool/iocage-plugin-nextcloud  
+- **Odoo**: https://github.com/damvcoool/iocage-plugin-odoo
 
-```yaml
-<PLUGIN_NAME>_task:
-  <<: *INSTALL_PLUGIN
-  only_if: "changesInclude('<PLUGIN_NAME>.json', '.cirrus/install_script.sh')"
-  matrix:
-    - freebsd_instance:
-        image_family: freebsd-12-2
-  env:
-    PLUGIN_FILE: "<PLUGIN_NAME>.json"
-```
+# Contributing
 
-### Block variables
-*  `<PLUGIN_NAME>` should equal (and be replaced with) the plugin JSON file name (without the `.json` file suffix)
-* The `matrix` -> `freebsd_instance` -> `image_family` should match the plugin manifest FreeBSD version. Alternatively this `matrix` can be a list of `freebsd_instances` with different versions if multiple FreeBSD versions are supported or needed to be tested
-* **required** `env` variables:
-  * `PLUGIN_FILE` should equal the plugin manifest file and is the one parsed inside the `install_script`
-* **optional** `env` variables:
-  * `ADMIN_UI_USER` should be used if there is a username/password required to reach the admin UI. Value should have the format: `<username>:<password>`
-  * `FOLLOW_REDIRECTS` if set to `"false"` will not follow redirects to admin UI and treat a 3XX code as success for the admin portal UI check
-  * `SKIP_UI_CHECK` if set to `"true"` will skip the admin portal UI check entirely
-  * `SKIP_SERVICE_CHECK` if set to `"true"` will skip checking if the services started in `post_install` are running
-  * `OVERRIDE_ADMIN_UI` check this UI URL after plugin installation instead of the URL specified in plugin `ui.json`
+This is a personal repository, but contributions and suggestions are welcome! Feel free to:
+
+- Report issues with existing plugins
+- Suggest improvements to plugin configurations
+- Propose new plugins for TrueNAS Core 13
+
+Please open an issue or pull request with your suggestions.
+
+# Resources
+
+- [TrueNAS Core Documentation](https://www.truenas.com/docs/core/)
+- [FreeBSD Handbook](https://docs.freebsd.org/en/books/handbook/)
+- [iocage Documentation](https://iocage.readthedocs.io/)
+- [Plugin Template](template/)
+
+# License
+
+This repository is maintained for personal use. Individual plugins may have their own licenses - please check each plugin's artifact repository for details.
