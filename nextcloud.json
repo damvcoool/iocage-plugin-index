@@ -17,11 +17,11 @@
         "php84-gmp",
         "php84-pcntl",
         "php84-pecl-redis",
+        "php84-pdo_pgsql",
         "php84-phar",
         "nginx",
         "postgresql17-server",
         "postgresql17-contrib",
-        "php84-pdo_pgsql",
         "redis",
         "py311-fail2ban",
         "py311-certbot"
