@@ -19,8 +19,9 @@
         "php84-pecl-redis",
         "php84-phar",
         "nginx",
-        "postgresql18-server",
-        "postgresql18-contrib",
+        "postgresql17-server",
+        "postgresql17-contrib",
+        "php84-pdo_pgsql",
         "redis",
         "py311-fail2ban",
         "py311-certbot"
