@@ -4,8 +4,8 @@
     "artifact": "https://github.com/damvcoool/iocage-plugin-gitea.git",
     "pkgs": [
         "gitea",
-        "postgresql17-server",
-        "postgresql17-contrib",
+        "postgresql18-server",
+        "postgresql18-contrib",
         "bash"
     ],
     "properties": {
