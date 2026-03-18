@@ -6,8 +6,8 @@
   "artifact": "https://github.com/damvcoool/iocage-plugin-odoo.git",
   "pkgs": [
     "py311-odoo",
-    "postgresql18-server",
-    "postgresql18-contrib",
+    "postgresql17-server",
+    "postgresql17-contrib",
     "py311-pip"
   ],
 
