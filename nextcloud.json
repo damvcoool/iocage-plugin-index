@@ -1,7 +1,7 @@
 {
     "name": "Nextcloud",
     "plugin_schema": "2",
-    "release": "13.5-RELEASE",
+    "release": "15.1-RELEASE",
     "artifact": "https://github.com/damvcoool/iocage-plugin-nextcloud.git",
     "official": false,
     "properties": {
