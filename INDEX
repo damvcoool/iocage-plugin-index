@@ -7,13 +7,21 @@
         "official": false,
         "primary_pkg": "gitea"
     },
+    "immich": {
+        "MANIFEST": "immich.json",
+        "name": "Immich",
+        "icon": "https://raw.githubusercontent.com/damvcoool/iocage-plugin-index/refs/heads/master/icons/immich.png",
+        "description": "High performance self-hosted photo and video backup solution optimized for file storage.",
+        "official": false,
+        "primary_pkg": "immich"
+    },
     "nextcloud": {
         "MANIFEST": "nextcloud.json",
         "name": "Nextcloud",
         "icon": "https://media.sys.truenas.net/core/icons/nextcloud.png",
         "description": "Suite of client-server software for creating and using file hosting services.",
         "official": false,
-        "primary_pkg": "nextcloud-php84"
+        "primary_pkg": "nextcloud-php85"
     },
     "odoo": {
         "MANIFEST": "odoo.json",
@@ -21,6 +29,6 @@
         "icon": "https://raw.githubusercontent.com/damvcoool/iocage-plugin-index/refs/heads/master/icons/odoo.png",
         "description": "Odoo is a suite of web based open source business apps.",
         "official": false,
-        "primary_pkg": "py311-odoo"
+        "primary_pkg": "py312-odoo"
     }
 }
