@@ -1,14 +1,14 @@
 {
   "name": "odoo",
-  "version": "18.0.20250108",
-  "release": "13.5-RELEASE",
+  "version": "19.0.20260618",
+  "release": "15.1-RELEASE",
 
   "artifact": "https://github.com/damvcoool/iocage-plugin-odoo.git",
   "pkgs": [
-    "py311-odoo",
-    "postgresql17-server",
-    "postgresql17-contrib",
-    "py311-pip"
+    "py312-odoo",
+    "postgresql18-server",
+    "postgresql18-contrib",
+    "py312-pip"
   ],
 
   "properties": {
