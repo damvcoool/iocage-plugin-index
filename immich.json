@@ -2,10 +2,6 @@
     "name": "Immich",
     "release": "15.1-RELEASE",
     "artifact": "https://github.com/damvcoool/iocage-plugin-immich.git",
-    "official": false,
-    "properties": {
-        "dhcp": 1
-    },
     "pkgs": [
         "immich",
         "postgresql18-server",
@@ -15,7 +11,10 @@
         "node",
         "valkey"
     ],
-    "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
+    "properties": {
+        "dhcp": 1
+    },
+    "packagesite": "https://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
         "plugin-default": [
             {
@@ -24,5 +23,6 @@
             }
         ]
     },
+    "official": false,
     "revision": 1
 }
