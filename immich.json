@@ -8,11 +8,11 @@
     },
     "pkgs": [
         "immich",
-        "node",
         "postgresql18-server",
         "postgresql18-contrib",
         "postgresql18-pgvector",
         "postgresql18-vchord",
+        "node",
         "valkey"
     ],
     "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
