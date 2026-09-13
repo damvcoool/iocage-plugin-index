@@ -1,10 +1,10 @@
 # Plugin Artifact Template
 
-This directory contains a template for creating TrueNAS Core 13 plugin artifacts.
+This directory contains a template for creating FreeCORE plugin artifacts.
 
 ## What is a Plugin Artifact?
 
-A plugin artifact is a Git repository that contains all the necessary files and scripts to install and configure a plugin in a TrueNAS Core jail. The plugin index (this repository) references these artifact repositories via the `artifact` field in each plugin's JSON manifest.
+A plugin artifact is a Git repository that contains all the necessary files and scripts to install and configure a plugin in a FreeCORE jail. The plugin index (this repository) references these artifact repositories via the `artifact` field in each plugin's JSON manifest.
 
 ## Artifact Repository Structure
 
@@ -69,7 +69,7 @@ Defines the admin portal URL for the plugin. The `%%IP%%` placeholder is replace
 
 ### settings.json
 
-Defines plugin settings that can be configured through the TrueNAS UI or iocage CLI.
+Defines plugin settings that can be configured through the FreeCORE UI or iocage CLI.
 
 **Required Fields:**
 
@@ -157,7 +157,7 @@ The plugin manifest (in this repository) references your artifact:
 
 ## Best Practices
 
-1. **Test Thoroughly**: Test your plugin in a clean TrueNAS Core 13 environment
+1. **Test Thoroughly**: Test your plugin in a clean FreeCORE environment
 2. **Minimal Packages**: Only include necessary packages to reduce jail size
 3. **Error Handling**: Include proper error checking in scripts
 4. **Documentation**: Provide clear README with setup instructions
@@ -203,7 +203,7 @@ The plugin manifest (in this repository) references your artifact:
 
 ## Resources
 
-- [TrueNAS Core Documentation](https://www.truenas.com/docs/core/)
+- [FreeCORE Project](https://github.com/freecore-project/)
 - [iocage Documentation](https://iocage.readthedocs.io/)
 - [FreeBSD Handbook](https://docs.freebsd.org/en/books/handbook/)
 - [FreeBSD Ports](https://www.freshports.org/)
