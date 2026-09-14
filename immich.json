@@ -3,16 +3,19 @@
     "release": "15.1-RELEASE",
     "artifact": "https://github.com/damvcoool/iocage-plugin-immich.git",
     "pkgs": [
-        "immich",
         "postgresql18-server",
+        "postgresql18-client",
         "postgresql18-contrib",
         "postgresql18-pgvector",
         "postgresql18-vchord",
+        "immich",
         "node",
         "valkey"
     ],
     "properties": {
-        "dhcp": 1
+        "dhcp": 1,
+        "defaultrouter6": "none",
+        "vnet": 1
     },
     "packagesite": "https://pkg.FreeBSD.org/${ABI}/latest",
     "fingerprints": {
