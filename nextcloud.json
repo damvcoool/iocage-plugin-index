@@ -4,6 +4,7 @@
     "artifact": "https://github.com/damvcoool/iocage-plugin-nextcloud.git",
     "pkgs": [
         "postgresql18-server",
+        "postgresql18-client",
         "postgresql18-contrib",
         "ffmpeg",
         "nextcloud-php85",
